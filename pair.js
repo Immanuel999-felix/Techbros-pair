@@ -107,7 +107,7 @@ text: desc,
 contextInfo: {
 externalAdReply: {
 title: "ᴛᴇᴄʜʙʀᴏꜱ ᴍᴅ",
-thumbnailUrl: "https://i.ibb.co/rKGw1wJh/file-000000005f3861fd86650fd7f57dde90.png",
+thumbnailUrl: "https://i.ibb.co/rKGw1wJh/file-000000005f3861fd86650fd7f57dde90.jgp",
 sourceUrl: "https://whatsapp.com/channel/0029VarWtitEgGfDrNnWs83N",
 mediaType: 1,
 renderLargerThumbnail: true
@@ -147,7 +147,7 @@ text: desc,
 contextInfo: {
 externalAdReply: {
 title: "ᴛᴇᴄʜʙʀᴏꜱ ᴍᴅ",
-thumbnailUrl: "https://i.ibb.co/rKGw1wJh/file-000000005f3861fd86650fd7f57dde90.png",
+thumbnailUrl: "https://i.ibb.co/rKGw1wJh/file-000000005f3861fd86650fd7f57dde90.jgp",
 sourceUrl: "https://whatsapp.com/channel/0029VarWtitEgGfDrNnWs83N",
 mediaType: 2,
 renderLargerThumbnail: true,
