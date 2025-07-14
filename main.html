@@ -20,6 +20,7 @@
       align-items: center;
       min-height: 100vh;
       justify-content: center;
+      text-align: center;
     }
 
     @keyframes bgMove {
@@ -62,7 +63,6 @@
       padding: 15px 20px;
       border-radius: 12px;
       color: #ffffff;
-      text-align: center;
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
@@ -104,13 +104,23 @@
     .error-btn:hover {
       box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
     }
+
+    .time-box {
+      background: rgba(0,0,0,0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: cyan;
+      margin-top: 20px;
+      font-size: 0.95rem;
+      text-shadow: 0 0 5px #000;
+    }
   </style>
 </head>
 <body>
 
   <img class="logo" src="https://i.ibb.co/rKGw1wJh/file-000000005f3861fd86650fd7f57dde90.png" alt="TECHBROS Logo"/>
 
-  <h1>TECHBROS-MD PAIR-WEB</h1>
+  <h1>TECHBROS-MD PAIR</h1>
   <p class="author">By 💙TECH BROS💙</p>
 
   <div class="btn-group">
@@ -121,10 +131,17 @@
   </div>
 
   <div class="message">HAVE ANY ERROR? CLICK THE BUTTON BELOW⬇️!</div>
-  <a class="btn error-btn" href="https://wa.me/2349126807818" target="_blank">
- <a class="btn error-btn" href="https://wa.me/" target="_blank">
-    <i class="fas fa-bug"></i> ⚠️REPORT ERROR⚠️
-  </a>
+
+  <div class="btn-group">
+    <a class="btn error-btn" href="https://wa.me/2349126807818" target="_blank">
+      <i class="fas fa-bug"></i> Report to Team  
+    </a>
+    <a class="btn error-btn" href="https://wa.me/2349076087791" target="_blank">
+      <i class="fas fa-bug"></i> Report to Team  
+    </a>
+  </div>
+
+  <div class="time-box" id="timeBox"></div>
 
   <footer>
     TECHBROS-MD💙 &copy; <span id="year"></span> | POWERED BY TECH BROS
@@ -132,6 +149,27 @@
 
   <script>
     document.getElementById("year").innerText = new Date().getFullYear();
+
+    const quotes = [
+      "💬 Stay ahead with TECHBROS.",
+      "🚀 Built for speed & stability.",
+      "🔧 Simple. Smart. Secure.",
+      "⚡ Powering your connections.",
+      "💡 Innovation meets simplicity."
+    ];
+
+    function updateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const timeStr = now.toLocaleTimeString('en-US');
+      const dateStr = now.toLocaleDateString('en-US', options);
+      const quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById('timeBox').innerHTML = `🕒 It's ${timeStr} on ${dateStr}<br>${quote}`;
+    }
+
+    setInterval(updateTime, 5000);
+    updateTime();
   </script>
+
 </body>
-</html>
+      </html>
