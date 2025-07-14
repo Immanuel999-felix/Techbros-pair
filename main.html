@@ -1,131 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TECHBROS-MD SESSION</title>
+  <link rel="icon" href="https://i.ibb.co/rKGw1wJh/file-000000005f3861fd86650fd7f57dde90.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     body {
-      background-color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
       margin: 0;
-      color: white;
-    }
-
-    {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "url": "https://railway.app",
-            "logo": "https://files.catbox.moe/39z8jd.jpg"
-    }
-
-    .button-container {
-      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #000000, #0c0f2b, #000000);
+      background-size: 400% 400%;
+      animation: bgMove 30s ease infinite;
+      color: #e0e0e0;
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    h3 {
-      margin-top: -40px;
-      opacity: 0;
-      animation: fadeIn 3s forwards;
-    }
-
-    .button {
-      width: 140px;
-      height: 40px;
-      display: flex;
-      align-items: center;
+      min-height: 100vh;
       justify-content: center;
-      gap: 10px;
-      padding: 0px 15px;
-      background-color: red;
-      border-radius: 10px;
-      border: none;
-      color: white;
-      position: relative;
-      cursor: pointer;
-      font-weight: 900;
-      transition-duration: .2s;
-      background: linear-gradient(0deg, #000, #272727);
+    }
+
+    @keyframes bgMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 123, 255, 0.4);
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 10px;
+    }
+
+    p.author {
+      color: #cccccc;
+      margin-bottom: 40px;
+    }
+
+    .btn-group {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      width: 90%;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    a.btn {
+      background: linear-gradient(135deg, #112244, #1a1a2e);
+      padding: 15px 20px;
+      border-radius: 12px;
+      color: #ffffff;
+      text-align: center;
       text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+      transition: 0.3s;
     }
 
-  
+    a.btn:hover {
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+    }
+
+    .message {
+      background: rgba(0, 123, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 30px;
+      margin-bottom: 10px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.5); }
+      70% { box-shadow: 0 0 0 20px rgba(0, 123, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+    }
+
     footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #222; /* Darker gray footer background */
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 14px;
-    
-  }
-    .button:before, .button:after {
-      content: '';
-      position: absolute;
-      left: -2px;
-      top: -2px;
-      border-radius: 10px;
-      background: linear-gradient(45deg, #48ff00, #15ff00, #000000,#000000, #ff0000);
-      background-size: 400%;
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
-      z-index: -1;
-      animation: steam 10s linear infinite;
+      margin-top: 50px;
+      color: #999;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 10px 0;
     }
 
-    @keyframes steam {
-      0% {
-        background-position: 0 0;
-      }
-
-      50% {
-        background-position: 400% 0;
-      }
-
-      100% {
-        background-position: 0 0;
-      }
+    .error-btn {
+      background: linear-gradient(135deg, #d32f2f, #ff6b6b);
     }
 
-    .button:after {
-      filter: blur(50px);
-    }
-
-    .button span {
-      z-index: 1;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+    .error-btn:hover {
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
     }
   </style>
 </head>
 <body>
-  <div class="button-container">
-    <h3> MALVIN SESSION</h3>
-    <div></div>
-    <a href="/qr" class="button" target="_blank"> <span>QR-CODE</span> </a> <br>
-    <a href="/pair" class="button" target="_blank"> <span>PAIRING-CODE</span> </a> <br>
-    <a href="https://github.com/XdKing2/MALVIN-XD/fork" class="button" target="_blank"> <span>FORK MALVIN XD</span> </a> <br> </a>
-    <a href="https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A" class="button" target="_blank"> <span>WhatsApp</span> </a> <br>
 
-    <p>HAVE ANY ERROR CLICK ERROR BUTTON</p>
+  <img class="logo" src="https://i.ibb.co/rKGw1wJh/file-000000005f3861fd86650fd7f57dde90.png" alt="TECHBROS Logo"/>
 
-    <a href="https://wa.me/263780166288" class="button" target="_blank"> <span>ERROR</span> </a> <br>
+  <h1>TECHBROS-MD PAIR-WEB</h1>
+  <p class="author">By 💙TECH BROS💙</p>
 
-    <footer>
-     MALVIN &copy; <span id="currentYear"></span>
-    </footer>
-  
+  <div class="btn-group">
+    <a class="btn" href="/qr" target="_blank"><i class="fas fa-qrcode"></i> QR CODE</a>
+    <a class="btn" href="/pair" target="_blank"><i class="fas fa-link"></i> PAIRING CODE</a>
+    <a class="btn" href="https://github.com/XdKing2/MALVIN-XD/fork" target="_blank"><i class="fab fa-github"></i> Fork TECHBROS-MD</a>
+    <a class="btn" href="https://whatsapp.com/channel/0029VarWtitEgGfDrNnWs83N" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Channel</a>
+  </div>
+
+  <div class="message">HAVE ANY ERROR? CLICK THE BUTTON BELOW⬇️!</div>
+  <a class="btn error-btn" href="https://wa.me/2349126807818" target="_blank">
+ <a class="btn error-btn" href="https://wa.me/" target="_blank">
+    <i class="fas fa-bug"></i> ⚠️REPORT ERROR⚠️
+  </a>
+
+  <footer>
+    TECHBROS-MD💙 &copy; <span id="year"></span> | POWERED BY TECH BROS
+  </footer>
+
+  <script>
+    document.getElementById("year").innerText = new Date().getFullYear();
+  </script>
 </body>
 </html>
